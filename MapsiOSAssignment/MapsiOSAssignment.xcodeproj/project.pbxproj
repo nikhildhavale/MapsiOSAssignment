@@ -8,22 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		0E542E922296FBE00099C3F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E542E912296FBE00099C3F2 /* AppDelegate.swift */; };
-		0E542E942296FBE00099C3F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E542E932296FBE00099C3F2 /* ViewController.swift */; };
 		0E542E972296FBE00099C3F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E542E952296FBE00099C3F2 /* Main.storyboard */; };
 		0E542E9A2296FBE00099C3F2 /* MapsiOSAssignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E542E982296FBE00099C3F2 /* MapsiOSAssignment.xcdatamodeld */; };
 		0E542E9C2296FBE00099C3F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E542E9B2296FBE00099C3F2 /* Assets.xcassets */; };
 		0E542E9F2296FBE00099C3F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E542E9D2296FBE00099C3F2 /* LaunchScreen.storyboard */; };
+		0EADB866229A3D10002542A9 /* TripListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADB864229A3D10002542A9 /* TripListTableViewCell.swift */; };
+		0EADB867229A3D10002542A9 /* TripListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EADB865229A3D10002542A9 /* TripListTableViewCell.xib */; };
+		0EADB869229A3DCC002542A9 /* TripTableViewWrapperController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADB868229A3DCC002542A9 /* TripTableViewWrapperController.swift */; };
+		0EADB86B229A3E2B002542A9 /* TripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADB86A229A3E2B002542A9 /* TripTableViewController.swift */; };
+		0EADB86D229A3E76002542A9 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADB86C229A3E76002542A9 /* Trip.swift */; };
+		0EADB871229A4200002542A9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADB870229A4200002542A9 /* Constants.swift */; };
+		0EADB873229A461A002542A9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADB872229A461A002542A9 /* MapViewController.swift */; };
+		0EADB875229A4928002542A9 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADB874229A4927002542A9 /* AddTripViewController.swift */; };
+		0EADB879229A49F5002542A9 /* AddTripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADB878229A49F5002542A9 /* AddTripTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0E542E8E2296FBE00099C3F2 /* MapsiOSAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapsiOSAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E542E912296FBE00099C3F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0E542E932296FBE00099C3F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0E542E962296FBE00099C3F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E542E992296FBE00099C3F2 /* MapsiOSAssignment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MapsiOSAssignment.xcdatamodel; sourceTree = "<group>"; };
 		0E542E9B2296FBE00099C3F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E542E9E2296FBE00099C3F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E542EA02296FBE00099C3F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EADB864229A3D10002542A9 /* TripListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListTableViewCell.swift; sourceTree = "<group>"; };
+		0EADB865229A3D10002542A9 /* TripListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripListTableViewCell.xib; sourceTree = "<group>"; };
+		0EADB868229A3DCC002542A9 /* TripTableViewWrapperController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewWrapperController.swift; sourceTree = "<group>"; };
+		0EADB86A229A3E2B002542A9 /* TripTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewController.swift; sourceTree = "<group>"; };
+		0EADB86C229A3E76002542A9 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		0EADB870229A4200002542A9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0EADB872229A461A002542A9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0EADB874229A4927002542A9 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
+		0EADB878229A49F5002542A9 /* AddTripTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +73,38 @@
 			isa = PBXGroup;
 			children = (
 				0E542E912296FBE00099C3F2 /* AppDelegate.swift */,
-				0E542E932296FBE00099C3F2 /* ViewController.swift */,
-				0E542E952296FBE00099C3F2 /* Main.storyboard */,
+				0EADB86F229A3E8E002542A9 /* UI Elements */,
 				0E542E9B2296FBE00099C3F2 /* Assets.xcassets */,
 				0E542E9D2296FBE00099C3F2 /* LaunchScreen.storyboard */,
 				0E542EA02296FBE00099C3F2 /* Info.plist */,
 				0E542E982296FBE00099C3F2 /* MapsiOSAssignment.xcdatamodeld */,
+				0EADB86E229A3E7F002542A9 /* ViewController */,
+				0EADB86C229A3E76002542A9 /* Trip.swift */,
+				0EADB870229A4200002542A9 /* Constants.swift */,
 			);
 			path = MapsiOSAssignment;
+			sourceTree = "<group>";
+		};
+		0EADB86E229A3E7F002542A9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0EADB868229A3DCC002542A9 /* TripTableViewWrapperController.swift */,
+				0EADB86A229A3E2B002542A9 /* TripTableViewController.swift */,
+				0EADB872229A461A002542A9 /* MapViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0EADB86F229A3E8E002542A9 /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				0E542E952296FBE00099C3F2 /* Main.storyboard */,
+				0EADB864229A3D10002542A9 /* TripListTableViewCell.swift */,
+				0EADB865229A3D10002542A9 /* TripListTableViewCell.xib */,
+				0EADB874229A4927002542A9 /* AddTripViewController.swift */,
+				0EADB878229A49F5002542A9 /* AddTripTableViewController.swift */,
+			);
+			path = "UI Elements";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EADB867229A3D10002542A9 /* TripListTableViewCell.xib in Resources */,
 				0E542E9F2296FBE00099C3F2 /* LaunchScreen.storyboard in Resources */,
 				0E542E9C2296FBE00099C3F2 /* Assets.xcassets in Resources */,
 				0E542E972296FBE00099C3F2 /* Main.storyboard in Resources */,
@@ -138,9 +179,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EADB86D229A3E76002542A9 /* Trip.swift in Sources */,
+				0EADB86B229A3E2B002542A9 /* TripTableViewController.swift in Sources */,
 				0E542E9A2296FBE00099C3F2 /* MapsiOSAssignment.xcdatamodeld in Sources */,
-				0E542E942296FBE00099C3F2 /* ViewController.swift in Sources */,
+				0EADB866229A3D10002542A9 /* TripListTableViewCell.swift in Sources */,
+				0EADB871229A4200002542A9 /* Constants.swift in Sources */,
+				0EADB875229A4928002542A9 /* AddTripViewController.swift in Sources */,
+				0EADB879229A49F5002542A9 /* AddTripTableViewController.swift in Sources */,
+				0EADB869229A3DCC002542A9 /* TripTableViewWrapperController.swift in Sources */,
 				0E542E922296FBE00099C3F2 /* AppDelegate.swift in Sources */,
+				0EADB873229A461A002542A9 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
