@@ -9,6 +9,7 @@
 import UIKit
 
 class AddTripViewController: UIViewController {
+    weak var addTripDelegate:AddTripDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,9 +18,15 @@ class AddTripViewController: UIViewController {
     }
     
     @IBAction func doneButtonClicked(_ sender: Any) {
+        if let childController = children.first as? AddTripTableViewController {
+            addTripDelegate?.addTrip(trip: childController.trip)
+        }
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func cancelButtonClicked(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

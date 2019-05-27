@@ -138,9 +138,14 @@
                         <viewLayoutGuide key="safeArea" id="mcw-nn-e5c"/>
                     </view>
                     <navigationItem key="navigationItem" id="zIc-L8-Izj">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="lc2-3e-b1X">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="lc2-3e-b1X">
                             <connections>
-                                <action selector="doneButtonClicked:" destination="Ily-lC-rfV" id="CH6-oG-J7l"/>
+                                <action selector="cancelButtonClicked:" destination="Ily-lC-rfV" id="hmH-Qh-GdW"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="a9k-py-px9">
+                            <connections>
+                                <action selector="doneButtonClicked:" destination="Ily-lC-rfV" id="Nvq-yV-AYL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -171,7 +176,7 @@
         <scene sceneID="KpL-yl-7hD">
             <objects>
                 <tableViewController id="4bE-nR-ahc" customClass="AddTripTableViewController" customModule="MapsiOSAssignment" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AoC-vw-SaP">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AoC-vw-SaP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -12,6 +12,10 @@
 		0E542E9A2296FBE00099C3F2 /* MapsiOSAssignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E542E982296FBE00099C3F2 /* MapsiOSAssignment.xcdatamodeld */; };
 		0E542E9C2296FBE00099C3F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E542E9B2296FBE00099C3F2 /* Assets.xcassets */; };
 		0E542E9F2296FBE00099C3F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E542E9D2296FBE00099C3F2 /* LaunchScreen.storyboard */; };
+		0E818359229B847D006D8C31 /* EditTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E818357229B847D006D8C31 /* EditTextTableViewCell.swift */; };
+		0E81835A229B847D006D8C31 /* EditTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E818358229B847D006D8C31 /* EditTextTableViewCell.xib */; };
+		0E81835D229B85C4006D8C31 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E81835B229B85C4006D8C31 /* SwitchTableViewCell.swift */; };
+		0E81835E229B85C4006D8C31 /* SwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E81835C229B85C4006D8C31 /* SwitchTableViewCell.xib */; };
 		0EADB866229A3D10002542A9 /* TripListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADB864229A3D10002542A9 /* TripListTableViewCell.swift */; };
 		0EADB867229A3D10002542A9 /* TripListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EADB865229A3D10002542A9 /* TripListTableViewCell.xib */; };
 		0EADB869229A3DCC002542A9 /* TripTableViewWrapperController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADB868229A3DCC002542A9 /* TripTableViewWrapperController.swift */; };
@@ -31,6 +35,10 @@
 		0E542E9B2296FBE00099C3F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E542E9E2296FBE00099C3F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E542EA02296FBE00099C3F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E818357229B847D006D8C31 /* EditTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTextTableViewCell.swift; sourceTree = "<group>"; };
+		0E818358229B847D006D8C31 /* EditTextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditTextTableViewCell.xib; sourceTree = "<group>"; };
+		0E81835B229B85C4006D8C31 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		0E81835C229B85C4006D8C31 /* SwitchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchTableViewCell.xib; sourceTree = "<group>"; };
 		0EADB864229A3D10002542A9 /* TripListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListTableViewCell.swift; sourceTree = "<group>"; };
 		0EADB865229A3D10002542A9 /* TripListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripListTableViewCell.xib; sourceTree = "<group>"; };
 		0EADB868229A3DCC002542A9 /* TripTableViewWrapperController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewWrapperController.swift; sourceTree = "<group>"; };
@@ -88,6 +96,8 @@
 		0EADB86E229A3E7F002542A9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				0EADB874229A4927002542A9 /* AddTripViewController.swift */,
+				0EADB878229A49F5002542A9 /* AddTripTableViewController.swift */,
 				0EADB868229A3DCC002542A9 /* TripTableViewWrapperController.swift */,
 				0EADB86A229A3E2B002542A9 /* TripTableViewController.swift */,
 				0EADB872229A461A002542A9 /* MapViewController.swift */,
@@ -101,8 +111,10 @@
 				0E542E952296FBE00099C3F2 /* Main.storyboard */,
 				0EADB864229A3D10002542A9 /* TripListTableViewCell.swift */,
 				0EADB865229A3D10002542A9 /* TripListTableViewCell.xib */,
-				0EADB874229A4927002542A9 /* AddTripViewController.swift */,
-				0EADB878229A49F5002542A9 /* AddTripTableViewController.swift */,
+				0E818357229B847D006D8C31 /* EditTextTableViewCell.swift */,
+				0E818358229B847D006D8C31 /* EditTextTableViewCell.xib */,
+				0E81835B229B85C4006D8C31 /* SwitchTableViewCell.swift */,
+				0E81835C229B85C4006D8C31 /* SwitchTableViewCell.xib */,
 			);
 			path = "UI Elements";
 			sourceTree = "<group>";
@@ -165,8 +177,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E81835A229B847D006D8C31 /* EditTextTableViewCell.xib in Resources */,
 				0EADB867229A3D10002542A9 /* TripListTableViewCell.xib in Resources */,
 				0E542E9F2296FBE00099C3F2 /* LaunchScreen.storyboard in Resources */,
+				0E81835E229B85C4006D8C31 /* SwitchTableViewCell.xib in Resources */,
 				0E542E9C2296FBE00099C3F2 /* Assets.xcassets in Resources */,
 				0E542E972296FBE00099C3F2 /* Main.storyboard in Resources */,
 			);
@@ -184,11 +198,13 @@
 				0E542E9A2296FBE00099C3F2 /* MapsiOSAssignment.xcdatamodeld in Sources */,
 				0EADB866229A3D10002542A9 /* TripListTableViewCell.swift in Sources */,
 				0EADB871229A4200002542A9 /* Constants.swift in Sources */,
+				0E81835D229B85C4006D8C31 /* SwitchTableViewCell.swift in Sources */,
 				0EADB875229A4928002542A9 /* AddTripViewController.swift in Sources */,
 				0EADB879229A49F5002542A9 /* AddTripTableViewController.swift in Sources */,
 				0EADB869229A3DCC002542A9 /* TripTableViewWrapperController.swift in Sources */,
 				0E542E922296FBE00099C3F2 /* AppDelegate.swift in Sources */,
 				0EADB873229A461A002542A9 /* MapViewController.swift in Sources */,
+				0E818359229B847D006D8C31 /* EditTextTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
