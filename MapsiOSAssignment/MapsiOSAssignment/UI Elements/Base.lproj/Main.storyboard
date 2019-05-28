@@ -113,6 +113,24 @@
             </objects>
             <point key="canvasLocation" x="693" y="-648"/>
         </scene>
+        <!--Auto Complete Table View Controller-->
+        <scene sceneID="O0a-H4-ErL">
+            <objects>
+                <tableViewController id="xIL-7A-XRV" customClass="AutoCompleteTableViewController" customModule="MapsiOSAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3R3-O6-PIZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="xIL-7A-XRV" id="9Cu-eZ-ndM"/>
+                            <outlet property="delegate" destination="xIL-7A-XRV" id="JtV-Ud-MOM"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cnK-eE-d13" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1381" y="-1512"/>
+        </scene>
         <!--Add Trip View Controller-->
         <scene sceneID="YE1-Iq-chA">
             <objects>
@@ -127,12 +145,24 @@
                                     <segue destination="4bE-nR-ahc" kind="embed" id="ta8-8S-7ap"/>
                                 </connections>
                             </containerView>
+                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hvo-UV-exi">
+                                <rect key="frame" x="0.0" y="88" width="414" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="MWb-zm-2R5"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="xIL-7A-XRV" kind="embed" id="E1n-Rj-3Jj"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="JCF-NE-leb" firstAttribute="leading" secondItem="mcw-nn-e5c" secondAttribute="leading" id="Pga-hv-fM0"/>
+                            <constraint firstItem="hvo-UV-exi" firstAttribute="top" secondItem="mcw-nn-e5c" secondAttribute="top" id="ZzL-hi-4r5"/>
+                            <constraint firstItem="hvo-UV-exi" firstAttribute="leading" secondItem="mcw-nn-e5c" secondAttribute="leading" id="epH-gF-B03"/>
                             <constraint firstItem="mcw-nn-e5c" firstAttribute="bottom" secondItem="JCF-NE-leb" secondAttribute="bottom" id="gn2-oj-OHs"/>
                             <constraint firstItem="JCF-NE-leb" firstAttribute="top" secondItem="mcw-nn-e5c" secondAttribute="top" id="hSQ-Di-QQ0"/>
+                            <constraint firstItem="mcw-nn-e5c" firstAttribute="trailing" secondItem="hvo-UV-exi" secondAttribute="trailing" id="iMm-Lr-vqy"/>
                             <constraint firstItem="mcw-nn-e5c" firstAttribute="trailing" secondItem="JCF-NE-leb" secondAttribute="trailing" id="ktb-x1-fB3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mcw-nn-e5c"/>
@@ -149,10 +179,14 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="autoCompleteTableViewContainer" destination="hvo-UV-exi" id="ewc-kd-4Pq"/>
+                        <outlet property="topConstraint" destination="ZzL-hi-4r5" id="jgp-4c-OcO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEt-OZ-xKg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1436" y="-684"/>
+            <point key="canvasLocation" x="1434.7826086956522" y="-684.375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6uZ-Qa-qFk">

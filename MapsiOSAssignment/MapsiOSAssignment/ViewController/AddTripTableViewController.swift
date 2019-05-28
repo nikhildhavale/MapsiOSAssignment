@@ -7,9 +7,11 @@
 //
 
 import UIKit
-
-class AddTripTableViewController: UITableViewController {
+import CoreLocation
+class AddTripTableViewController: UITableViewController,UITextFieldDelegate {
     var trip:Trip = Trip()
+    let geoCoder = CLGeocoder()
+    weak var delegate:AutoCompleteDataDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,11 +38,16 @@ class AddTripTableViewController: UITableViewController {
             let addCell = tableView.dequeueReusableCell(withIdentifier: StoryBoardConstants.addTripTextFieldIdentifier, for: indexPath) as! EditTextTableViewCell
             addCell.tag = indexPath.row
             addCell.textField.placeholder = PlaceHolderText.startAddress
+            addCell.textField.delegate = self
+            addCell.textField.tag = indexPath.row
             cell = addCell
         case 1:
             let addCell = tableView.dequeueReusableCell(withIdentifier: StoryBoardConstants.addTripTextFieldIdentifier, for: indexPath) as! EditTextTableViewCell
             addCell.tag = indexPath.row
             addCell.textField.placeholder = PlaceHolderText.endAddress
+            addCell.textField.delegate = self
+            addCell.textField.tag = indexPath.row
+
             cell = addCell
         case 2:
              let switchCell  = tableView.dequeueReusableCell(withIdentifier: StoryBoardConstants.addTripTSwitchIdentifier, for: indexPath) as! SwitchTableViewCell
@@ -81,6 +88,12 @@ class AddTripTableViewController: UITableViewController {
         }
             
     }
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if let parent = self.parent as? AddTripViewController {
+            parent.setTextField(textField: textField)
+        }
+        return true
+    }
     override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let addCell = cell as? EditTextTableViewCell {
             if addCell.tag == 0 {
@@ -100,6 +113,24 @@ class AddTripTableViewController: UITableViewController {
 
             }
         }
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if var completeText = textField.text {
+            completeText += string
+            if completeText.count > 2 {
+                geoCoder.geocodeAddressString(completeText, completionHandler: {(placemark,error) in
+                    if let placemarkArray = placemark {
+                        self.delegate?.sendAutoCompleteData(placemark: placemarkArray)
+                    }
+                })
+            }
+        }
+        
+        return true
     }
     /*
     // Override to support conditional editing of the table view.
