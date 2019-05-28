@@ -19,7 +19,8 @@ class AddTripViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         topConstraint.isActive = false
-        // Do any additional setup after loading the view.
+        autoCompleteTableViewContainer.layer.borderColor = UIColor.gray.cgColor
+        autoCompleteTableViewContainer.layer.borderWidth = 1.0
     }
     override func viewWillAppear(_ animated: Bool) {
         if let childController = children.first as? AddTripTableViewController , let autoCompleteController = children.last as? AutoCompleteTableViewController  {

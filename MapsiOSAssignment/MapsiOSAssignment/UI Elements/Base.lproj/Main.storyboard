@@ -118,7 +118,7 @@
             <objects>
                 <tableViewController id="xIL-7A-XRV" customClass="AutoCompleteTableViewController" customModule="MapsiOSAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3R3-O6-PIZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="378" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <connections>
@@ -146,7 +146,7 @@
                                 </connections>
                             </containerView>
                             <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hvo-UV-exi">
-                                <rect key="frame" x="0.0" y="88" width="414" height="200"/>
+                                <rect key="frame" x="18" y="88" width="378" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="MWb-zm-2R5"/>
                                 </constraints>
@@ -159,10 +159,10 @@
                         <constraints>
                             <constraint firstItem="JCF-NE-leb" firstAttribute="leading" secondItem="mcw-nn-e5c" secondAttribute="leading" id="Pga-hv-fM0"/>
                             <constraint firstItem="hvo-UV-exi" firstAttribute="top" secondItem="mcw-nn-e5c" secondAttribute="top" id="ZzL-hi-4r5"/>
-                            <constraint firstItem="hvo-UV-exi" firstAttribute="leading" secondItem="mcw-nn-e5c" secondAttribute="leading" id="epH-gF-B03"/>
+                            <constraint firstItem="hvo-UV-exi" firstAttribute="leading" secondItem="mcw-nn-e5c" secondAttribute="leading" constant="18" id="epH-gF-B03"/>
                             <constraint firstItem="mcw-nn-e5c" firstAttribute="bottom" secondItem="JCF-NE-leb" secondAttribute="bottom" id="gn2-oj-OHs"/>
                             <constraint firstItem="JCF-NE-leb" firstAttribute="top" secondItem="mcw-nn-e5c" secondAttribute="top" id="hSQ-Di-QQ0"/>
-                            <constraint firstItem="mcw-nn-e5c" firstAttribute="trailing" secondItem="hvo-UV-exi" secondAttribute="trailing" id="iMm-Lr-vqy"/>
+                            <constraint firstItem="mcw-nn-e5c" firstAttribute="trailing" secondItem="hvo-UV-exi" secondAttribute="trailing" constant="18" id="iMm-Lr-vqy"/>
                             <constraint firstItem="mcw-nn-e5c" firstAttribute="trailing" secondItem="JCF-NE-leb" secondAttribute="trailing" id="ktb-x1-fB3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mcw-nn-e5c"/>
