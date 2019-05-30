@@ -51,6 +51,7 @@ class LocationManager:NSObject,CLLocationManagerDelegate {
                 }
             })
         }
+        manager.stopUpdatingLocation()
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         

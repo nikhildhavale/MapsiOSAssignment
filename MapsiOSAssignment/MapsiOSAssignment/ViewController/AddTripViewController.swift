@@ -30,6 +30,7 @@ class AddTripViewController: UIViewController {
     @IBAction func doneButtonClicked(_ sender: Any) {
         if let childController = children.first as? AddTripTableViewController {
             if(childController.trip.isTripDataComplete() && childController.endAddressCalled){
+                childController.trip.endAddressName = childController.endAddressString
                 addTripDelegate?.addTrip(trip: childController.trip)
             }
             else {
