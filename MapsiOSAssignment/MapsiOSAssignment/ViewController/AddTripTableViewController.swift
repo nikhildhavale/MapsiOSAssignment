@@ -8,10 +8,12 @@
 
 import UIKit
 import CoreLocation
-class AddTripTableViewController: UITableViewController,UITextFieldDelegate {
+class AddTripTableViewController: UITableViewController,UITextFieldDelegate , TripDataSetDelegate{
     var trip:Trip = Trip()
     let geoCoder = CLGeocoder()
     weak var delegate:AutoCompleteDataDelegate?
+    var startAddressString:String?
+    var endAddressString:String?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,6 +41,7 @@ class AddTripTableViewController: UITableViewController,UITextFieldDelegate {
             addCell.tag = indexPath.row
             addCell.textField.placeholder = PlaceHolderText.startAddress
             addCell.textField.delegate = self
+            addCell.textField.text = startAddressString
             addCell.textField.tag = indexPath.row
             cell = addCell
         case 1:
@@ -46,6 +49,7 @@ class AddTripTableViewController: UITableViewController,UITextFieldDelegate {
             addCell.tag = indexPath.row
             addCell.textField.placeholder = PlaceHolderText.endAddress
             addCell.textField.delegate = self
+            addCell.textField.text = endAddressString
             addCell.textField.tag = indexPath.row
 
             cell = addCell
@@ -70,6 +74,14 @@ class AddTripTableViewController: UITableViewController,UITextFieldDelegate {
         return cell
         // Configure the cell...
 
+    }
+    func startAddress(startAddress: String) {
+        startAddressString = startAddress
+        tableView.reloadData()
+    }
+    func endAddress(endAddress: String) {
+        endAddressString = endAddress
+        tableView.reloadData()
     }
     @objc func switchButton(uiSwitch:UISwitch){
         for cell in tableView.visibleCells {

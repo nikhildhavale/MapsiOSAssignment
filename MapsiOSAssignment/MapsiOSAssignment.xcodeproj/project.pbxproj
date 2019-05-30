@@ -12,6 +12,8 @@
 		0E542E9A2296FBE00099C3F2 /* MapsiOSAssignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E542E982296FBE00099C3F2 /* MapsiOSAssignment.xcdatamodeld */; };
 		0E542E9C2296FBE00099C3F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E542E9B2296FBE00099C3F2 /* Assets.xcassets */; };
 		0E542E9F2296FBE00099C3F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E542E9D2296FBE00099C3F2 /* LaunchScreen.storyboard */; };
+		0E76AD74229F7422004B5D90 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E76AD73229F7422004B5D90 /* Extension.swift */; };
+		0E76AD76229F750F004B5D90 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E76AD75229F750F004B5D90 /* LocationManager.swift */; };
 		0E818359229B847D006D8C31 /* EditTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E818357229B847D006D8C31 /* EditTextTableViewCell.swift */; };
 		0E81835A229B847D006D8C31 /* EditTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E818358229B847D006D8C31 /* EditTextTableViewCell.xib */; };
 		0E81835D229B85C4006D8C31 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E81835B229B85C4006D8C31 /* SwitchTableViewCell.swift */; };
@@ -36,6 +38,8 @@
 		0E542E9B2296FBE00099C3F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E542E9E2296FBE00099C3F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E542EA02296FBE00099C3F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E76AD73229F7422004B5D90 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		0E76AD75229F750F004B5D90 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		0E818357229B847D006D8C31 /* EditTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTextTableViewCell.swift; sourceTree = "<group>"; };
 		0E818358229B847D006D8C31 /* EditTextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditTextTableViewCell.xib; sourceTree = "<group>"; };
 		0E81835B229B85C4006D8C31 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 				0EADB86E229A3E7F002542A9 /* ViewController */,
 				0EADB86C229A3E76002542A9 /* Trip.swift */,
 				0EADB870229A4200002542A9 /* Constants.swift */,
+				0E76AD75229F750F004B5D90 /* LocationManager.swift */,
 			);
 			path = MapsiOSAssignment;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 				0E818358229B847D006D8C31 /* EditTextTableViewCell.xib */,
 				0E81835B229B85C4006D8C31 /* SwitchTableViewCell.swift */,
 				0E81835C229B85C4006D8C31 /* SwitchTableViewCell.xib */,
+				0E76AD73229F7422004B5D90 /* Extension.swift */,
 			);
 			path = "UI Elements";
 			sourceTree = "<group>";
@@ -198,6 +204,7 @@
 			files = (
 				0EADB86D229A3E76002542A9 /* Trip.swift in Sources */,
 				0E93E1F7229D8F8400ED59B7 /* AutoCompleteTableViewController.swift in Sources */,
+				0E76AD76229F750F004B5D90 /* LocationManager.swift in Sources */,
 				0EADB86B229A3E2B002542A9 /* TripTableViewController.swift in Sources */,
 				0E542E9A2296FBE00099C3F2 /* MapsiOSAssignment.xcdatamodeld in Sources */,
 				0EADB866229A3D10002542A9 /* TripListTableViewCell.swift in Sources */,
@@ -205,6 +212,7 @@
 				0E81835D229B85C4006D8C31 /* SwitchTableViewCell.swift in Sources */,
 				0EADB875229A4928002542A9 /* AddTripViewController.swift in Sources */,
 				0EADB879229A49F5002542A9 /* AddTripTableViewController.swift in Sources */,
+				0E76AD74229F7422004B5D90 /* Extension.swift in Sources */,
 				0EADB869229A3DCC002542A9 /* TripTableViewWrapperController.swift in Sources */,
 				0E542E922296FBE00099C3F2 /* AppDelegate.swift in Sources */,
 				0EADB873229A461A002542A9 /* MapViewController.swift in Sources */,

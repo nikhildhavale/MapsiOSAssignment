@@ -18,7 +18,11 @@ class Trip {
     var startCoordinates:CLLocation?
     var endCoordinates:CLLocation?
     var modesOfTravel:ModesOfTravel?
+    var wayPoints:[CLLocation] = [CLLocation]()
     func isTripDataComplete() -> Bool {
+        if wayPoints.count > 2 { /// There maybe cases where you may not get start and end address
+            return true
+        }
         guard startAddressName != nil && endAddressName != nil && startCoordinates != nil && endCoordinates != nil && modesOfTravel != nil else {
             return false
         }

@@ -32,8 +32,32 @@ class AddTripViewController: UIViewController {
             if(childController.trip.isTripDataComplete()){
                 addTripDelegate?.addTrip(trip: childController.trip)
             }
+            else {
+                showAlertOk(title: "Error", message: "Trip Data is not complete")
+            }
         }
         self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func startTracking(_ sender: UIBarButtonItem) {
+           if let childController = children.first as? AddTripTableViewController {
+            if childController.trip.modesOfTravel == nil {
+                showAlertOk(title: "Error", message: "please set modes of travel")
+            }
+            else {
+                if(!LocationManager.shared.trackingStarted){
+                    sender.title = "stop tracking"
+                    UIApplication.shared.isIdleTimerDisabled = true
+                    LocationManager.shared.startTracking(modeOfTravel: childController.trip.modesOfTravel!)
+                }
+                else {
+                    sender.title = "start tracking"
+                    UIApplication.shared.isIdleTimerDisabled = false
+                    LocationManager.shared.stopTracking()
+                    childController.trip = LocationManager.shared.trip
+                    
+                }
+            }
+        }
     }
     
     @IBAction func cancelButtonClicked(_ sender: Any) {

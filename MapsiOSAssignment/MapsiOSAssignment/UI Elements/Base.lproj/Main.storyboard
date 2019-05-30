@@ -173,11 +173,18 @@
                                 <action selector="cancelButtonClicked:" destination="Ily-lC-rfV" id="hmH-Qh-GdW"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="a9k-py-px9">
-                            <connections>
-                                <action selector="doneButtonClicked:" destination="Ily-lC-rfV" id="Nvq-yV-AYL"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="done" id="a9k-py-px9">
+                                <connections>
+                                    <action selector="doneButtonClicked:" destination="Ily-lC-rfV" id="Nvq-yV-AYL"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Start tracking" id="aXU-HT-1yL">
+                                <connections>
+                                    <action selector="startTracking:" destination="Ily-lC-rfV" id="MGO-7U-9ue"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="autoCompleteTableViewContainer" destination="hvo-UV-exi" id="ewc-kd-4Pq"/>
