@@ -29,7 +29,7 @@ class AddTripViewController: UIViewController {
     }
     @IBAction func doneButtonClicked(_ sender: Any) {
         if let childController = children.first as? AddTripTableViewController {
-            if(childController.trip.isTripDataComplete()){
+            if(childController.trip.isTripDataComplete() && childController.endAddressCalled){
                 addTripDelegate?.addTrip(trip: childController.trip)
             }
             else {
@@ -47,13 +47,15 @@ class AddTripViewController: UIViewController {
                 if(!LocationManager.shared.trackingStarted){
                     sender.title = "stop tracking"
                     UIApplication.shared.isIdleTimerDisabled = true
+                    LocationManager.shared.tripDataSetDelegate = childController
                     LocationManager.shared.startTracking(modeOfTravel: childController.trip.modesOfTravel!)
+                    
                 }
                 else {
                     sender.title = "start tracking"
                     UIApplication.shared.isIdleTimerDisabled = false
                     LocationManager.shared.stopTracking()
-                    childController.trip = LocationManager.shared.trip
+                    
                     
                 }
             }

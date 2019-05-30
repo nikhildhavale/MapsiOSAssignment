@@ -67,11 +67,12 @@ class LocationManager:NSObject,CLLocationManagerDelegate {
 
                         }
                         else {
-                            self.tripDataSetDelegate?.endAddress(endAddress: "\(location)")
+                            self.tripDataSetDelegate?.startAddress(startAddress: "\(location)")
                     }
                     })
             }
             else {
+                
                 trip.wayPoints.append(location)
             }
         }

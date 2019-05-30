@@ -14,6 +14,7 @@ class AddTripTableViewController: UITableViewController,UITextFieldDelegate , Tr
     weak var delegate:AutoCompleteDataDelegate?
     var startAddressString:String?
     var endAddressString:String?
+    var endAddressCalled = false
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -81,6 +82,8 @@ class AddTripTableViewController: UITableViewController,UITextFieldDelegate , Tr
     }
     func endAddress(endAddress: String) {
         endAddressString = endAddress
+        trip = LocationManager.shared.trip
+        endAddressCalled = true
         tableView.reloadData()
     }
     @objc func switchButton(uiSwitch:UISwitch){

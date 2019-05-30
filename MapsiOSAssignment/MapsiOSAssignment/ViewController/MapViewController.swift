@@ -26,33 +26,55 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             endPoint.coordinate = endLocation
             self.mapView.showAnnotations([startPoint,endPoint], animated: true)
             
-            let sourcePlaceMark = MKPlacemark(coordinate: startLocation)
-            let destinationPlaceMark = MKPlacemark(coordinate: endLocation)
-            let sourceMapItem = MKMapItem(placemark: sourcePlaceMark)
-            let destinationMapItem = MKMapItem(placemark: destinationPlaceMark)
-            let directionRequest = MKDirections.Request()
-            directionRequest.source = sourceMapItem
-            directionRequest.destination = destinationMapItem
-            if trip.modesOfTravel == ModesOfTravel.driving{
-                directionRequest.transportType = .automobile
-
+           
+         
+          
+           
+            if trip.wayPoints.count > 2 {
+                var index = 0
+                while index < trip.wayPoints.count
+                {
+                    let startLocation = trip.wayPoints[index]
+                    if index + 1 < trip.wayPoints.count {
+                        let endLocation = trip.wayPoints[index + 1]
+                        setDirectionRequest(startLocation: startLocation.coordinate, endLocation: endLocation.coordinate)
+                    }
+                    index += 2
+                }
             }
             else {
-                directionRequest.transportType = .walking
-
+              setDirectionRequest(startLocation: startLocation, endLocation: endLocation)
             }
-           let direction = MKDirections(request: directionRequest)
-            direction.calculate(completionHandler: {(response,error) in
-                guard let response = response else {
-                    return
-                }
-                if let route = response.routes.first {
-                    self.mapView.addOverlay(route.polyline, level: MKOverlayLevel.aboveRoads)
-                }
-            })
+         
             
         }
 
+    }
+    func setDirectionRequest(startLocation:CLLocationCoordinate2D,endLocation:CLLocationCoordinate2D){
+        let sourcePlaceMark = MKPlacemark(coordinate: startLocation)
+        let destinationPlaceMark = MKPlacemark(coordinate: endLocation)
+        let sourceMapItem = MKMapItem(placemark: sourcePlaceMark)
+        let destinationMapItem = MKMapItem(placemark: destinationPlaceMark)
+        let directionRequest = MKDirections.Request()
+        directionRequest.source = sourceMapItem
+        directionRequest.destination = destinationMapItem
+        let direction = MKDirections(request: directionRequest)
+        direction.calculate(completionHandler: {(response,error) in
+            guard let response = response else {
+                return
+            }
+            if let route = response.routes.first {
+                self.mapView.addOverlay(route.polyline, level: MKOverlayLevel.aboveRoads)
+            }
+        })
+        if trip.modesOfTravel == ModesOfTravel.driving{
+            directionRequest.transportType = .automobile
+            
+        }
+        else {
+            directionRequest.transportType = .walking
+            
+        }
     }
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let render = MKPolylineRenderer(overlay: overlay)
